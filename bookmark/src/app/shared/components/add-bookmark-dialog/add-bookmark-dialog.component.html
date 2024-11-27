@@ -1,0 +1,28 @@
+<div class="dialog-content">
+  <div class="header">
+    <div class="title">{{ dialogTitle }}</div>
+    <div class="description">Type bookmark name and url</div>
+    <mat-icon>bookmark_outline</mat-icon>
+  </div>
+
+  <form [formGroup]="bookmarkForm" (ngSubmit)="onSubmit()">
+    <div class="form">
+      <mat-form-field>
+        <mat-label>Name</mat-label>
+        <input matInput formControlName="name" />
+      </mat-form-field>
+      <mat-form-field class="url">
+        <mat-label>URL</mat-label>
+        <input matInput formControlName="url" />
+      </mat-form-field>
+    </div>
+    <button
+      mat-button
+      type="submit"
+      [disabled]="!bookmarkForm.valid"
+      class="btn-submit"
+    >
+      {{ data ? "Update Bookmark" : "Create Bookmark" }}
+    </button>
+  </form>
+</div>

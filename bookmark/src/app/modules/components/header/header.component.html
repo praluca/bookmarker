@@ -1,0 +1,18 @@
+<div class="header-content">
+  <span class="app-title">Bookmarker</span>
+  <mat-form-field class="search-field">
+    <input
+      matInput
+      type="text"
+      [(ngModel)]="searchedValue"
+      placeholder="Search for a bookmark..."
+      (input)="onChangeInput($event)"
+    />
+    <button matSuffix mat-icon-button aria-label="Search">
+      <mat-icon fontSet="material-icons-outlined">search</mat-icon>
+    </button>
+  </mat-form-field>
+  <button mat-icon-button aria-label="Add Bookmark" (click)="onAddBookmark()">
+    <mat-icon>add</mat-icon>
+  </button>
+</div>

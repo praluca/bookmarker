@@ -1,0 +1,20 @@
+<div class="dialog-content">
+  <div class="header">
+    <div class="title">Delete Bookmark</div>
+    <mat-icon>delete</mat-icon>
+  </div>
+  <div class="content">
+    <div class="question">Delete bookmark?</div>
+    <div class="text">
+      Are you sure you want to delete
+      <span class="bookmark-name">"{{ data.name }}"</span> ?<br />
+      You can't undo this action.
+    </div>
+    <div class="btn-container">
+      <button mat-button class="btn-cancel" (click)="onCancel()">Cancel</button>
+      <button mat-button class="btn-delete" (click)="onDeleteBookmark()">
+        Delete Bookmark
+      </button>
+    </div>
+  </div>
+</div>

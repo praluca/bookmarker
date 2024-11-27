@@ -1,0 +1,46 @@
+.dialog-content {
+    color: #EEEEEE;
+
+    .header {
+        padding: 20px;
+        display: flex;
+        justify-content: space-between;
+        background-color: #00ADB5;
+
+        .title {
+            font-size: 18px;
+            font-weight: 600;
+        }
+
+        .description {
+            opacity: 0.7;
+            font-size: 14px;
+
+        }
+    }
+
+    .form {
+        display: flex;
+        padding: 40px 25px;
+
+        input {
+            color: #393E46;
+        }
+
+        .url {
+            flex-grow: 2;
+            margin-left: 25px;
+        }
+    }
+
+    .btn-submit {
+        background-color: #393E46;
+        color: #EEEEEE;
+        position: absolute;
+        right: 20px;
+
+        &:disabled {
+            background-color: #888B90;
+        }
+    }
+}

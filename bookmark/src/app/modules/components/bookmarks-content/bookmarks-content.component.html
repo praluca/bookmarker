@@ -1,0 +1,22 @@
+<div class="content">
+  <div *ngIf="filteredBookmarks.length === 0 && searchedWord === ''">
+    <div *ngIf="todayBookmarks.length > 0">
+      <div class="date">Today</div>
+      <app-bookmarks-list [bookmarks]="todayBookmarks"></app-bookmarks-list>
+    </div>
+    <div *ngIf="yesterdayBookmarks.length > 0">
+      <div class="date">Yesterday</div>
+      <app-bookmarks-list [bookmarks]="yesterdayBookmarks"></app-bookmarks-list>
+    </div>
+    <div *ngIf="olderBookmarks.length > 0">
+      <div class="date">Older</div>
+      <app-bookmarks-list [bookmarks]="olderBookmarks"></app-bookmarks-list>
+    </div>
+  </div>
+  <div *ngIf="searchedWord !== ''">
+    <div>
+      <div class="date">Results for "{{ searchedWord }}"</div>
+      <app-bookmarks-list [bookmarks]="filteredBookmarks"></app-bookmarks-list>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,25 @@
+<div *ngFor="let bookmark of bookmarks" class="bookmarks-list">
+  <div class="row">
+    <mat-icon class="bookmark-icon">bookmark</mat-icon>
+    <div>
+      <div class="bookmark-name">{{ bookmark.name }}</div>
+      <div class="bookmark-url">{{ bookmark.url }}</div>
+    </div>
+  </div>
+  <div>
+    <button
+      mat-icon-button
+      aria-label="Edit Bookmark"
+      (click)="onEditBookmark(bookmark)"
+    >
+      <mat-icon class="edit-icon">edit</mat-icon>
+    </button>
+    <button
+      mat-icon-button
+      aria-label="Delete Bookmark"
+      (click)="onDeleteBookmark(bookmark)"
+    >
+      <mat-icon class="edit-icon">delete</mat-icon>
+    </button>
+  </div>
+</div>
