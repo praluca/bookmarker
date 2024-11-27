@@ -23,3 +23,12 @@ This is a basic bookmark app developed using Angular 16.2.0 version. It has a co
   ng serve
 ```
 Open your browser on http://localhost:4200/
+
+
+## Features
+
+- List bookmarks
+- Add bookmarks
+- Edit bookmarks
+- Delete bookmarks
+- Search for a specific bookmark
