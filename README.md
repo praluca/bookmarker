@@ -52,7 +52,7 @@ Open your browser on http://localhost:4200/
 
 ![App Screenshot](https://github.com/praluca/bookmarker/blob/main/pictures_of_app/wrong_url_error.png)
 
-=>if everything is ok, then button is enabled and highlighted is removed
+=>if everything is ok, then button is enabled and highlight is removed
 
 ![App Screenshot](https://github.com/praluca/bookmarker/blob/main/pictures_of_app/create_bookmark.png)
 
@@ -70,7 +70,7 @@ Open your browser on http://localhost:4200/
 
   ## NgRX
 
-  I used NgRx to store bookamrks and filtered bookmarks in app state.
+  I used NgRx to store bookmarks and filtered bookmarks in app state.
 
   ![App Screenshot](https://github.com/praluca/bookmarker/blob/main/pictures_of_app/ngrx_store.png)
 
