@@ -45,12 +45,15 @@ Open your browser on http://localhost:4200/
 - Add bookmarks
 
 => both fields are required, if there are missing, are highlighted and button is disabled
+
 ![App Screenshot](https://github.com/praluca/bookmarker/blob/main/pictures_of_app/error.png)
 
 => also if url is wrong
-![App Screenshot](https://github.com/praluca/bookmarker/blob/main/pictures_of_app/wrong_url.png)
+
+![App Screenshot](https://github.com/praluca/bookmarker/blob/main/pictures_of_app/wrong_url_error.png)
 
 =>if everything is ok, then button is enabled and highlighted is removed
+
 ![App Screenshot](https://github.com/praluca/bookmarker/blob/main/pictures_of_app/create_bookmark.png)
 
 - Edit bookmarks
