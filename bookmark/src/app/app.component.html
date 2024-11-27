@@ -1,4 +1,7 @@
 <div class="main-view">
   <app-header></app-header>
+  <div class="error" *ngIf="error.error">
+    <app-generic-error [error]="error"></app-generic-error>
+  </div>
   <app-bookmarks-content></app-bookmarks-content>
 </div>

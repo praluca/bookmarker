@@ -12,6 +12,8 @@ import { EffectsModule } from '@ngrx/effects';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { CoreEffects } from './core/state/core.effects';
 import { StoreService } from './shared/services/store.service';
+import { HttpErrorInterceptor } from './shared/interceptors/https-error';
+import { UpdateService } from './shared/services/update.service';
 
 @NgModule({
   declarations: [AppComponent],
@@ -31,7 +33,14 @@ import { StoreService } from './shared/services/store.service';
     EffectsModule.forRoot([CoreEffects]),
     StoreDevtoolsModule.instrument({ maxAge: 25, name: 'Bookmarker' }),
   ],
-  providers: [],
+  providers: [
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: HttpErrorInterceptor,
+      multi: true,
+      deps: [UpdateService],
+    },
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

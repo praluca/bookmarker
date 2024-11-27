@@ -20,8 +20,10 @@ server.get("/bookmarks/filter", (req, res) => {
   if (req.query.searchedValue && req.query.searchedValue !== "") {
     filteredData = cols.filter(
       (elem) =>
-        elem.url.includes(req.query.searchedValue) ||
-        elem.name.includes(req.query.searchedValue)
+        elem.url
+          .toLowerCase()
+          .includes(req.query.searchedValue.toLowerCase()) ||
+        elem.name.toLowerCase().includes(req.query.searchedValue.toLowerCase())
     );
   } else {
     filteredData = [];
@@ -35,6 +37,15 @@ server.get("/bookmarks", (req, res) => {
   let cols = data["bookmarks"];
   console.log("test", cols);
   res.json(cols);
+
+  //IF YOU WANT TO TEST HOW ERROR HANDLING WORKS, COMMENT FIRST PART AND UNCOMMENT THE BELOW PART
+
+  // return res.status(400).send({
+  //   timestamp: "2024-03-19T14:39:29.967+00:00",
+  //   status: 400,
+  //   error: "Request body could not be read properly.",
+  //   message: "Bad Request",
+  // });
 });
 
 server.use(middlewares);
