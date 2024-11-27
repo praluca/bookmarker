@@ -67,3 +67,9 @@ Open your browser on http://localhost:4200/
 - Search for a specific bookmark
 
   ![App Screenshot](https://github.com/praluca/bookmarker/blob/main/pictures_of_app/search_bookmark.png)
+
+  ## NgRX
+
+  I used NgRx to store bookamrks and filtered bookmarks in app state.
+
+![App Screenshot](https://github.com/praluca/bookmarker/blob/main/pictures_of_app/ngrx.png)
