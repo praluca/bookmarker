@@ -41,6 +41,7 @@ Open your browser on http://localhost:4200/
 ## Features
 
 - List bookmarks
+  ![App Screenshot](https://github.com/praluca/bookmarker/blob/main/pictures_of_app/list_bookmarks.png)
 - Add bookmarks
 - Edit bookmarks
 - Delete bookmarks
