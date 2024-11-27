@@ -33,4 +33,8 @@ export class BookmarksListComponent implements OnInit {
       autoFocus: false,
     });
   }
+
+  onOpenPage(url: string) {
+    window.open(url, '_blank');
+  }
 }

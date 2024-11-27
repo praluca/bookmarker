@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormControl } from '@angular/forms';
 import { MatDialog } from '@angular/material/dialog';
 import { debounceTime } from 'rxjs';
 import { AddBookmarkDialogComponent } from 'src/app/shared/components/add-bookmark-dialog/add-bookmark-dialog.component';
@@ -13,7 +14,7 @@ import { UpdateService } from 'src/app/shared/services/update.service';
   styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent implements OnInit {
-  searchedValue: string = '';
+  searchedValue = new FormControl();
 
   constructor(
     public dialog: MatDialog,
@@ -22,16 +23,18 @@ export class HeaderComponent implements OnInit {
     private updateService: UpdateService
   ) {}
 
-  ngOnInit(): void {}
-
-  onChangeInput(event: Event) {
-    let inputValue =
-      event.target instanceof HTMLInputElement ? event.target.value : '';
-    this.updateService.updateCurrentSearchWord(inputValue);
-    this.apiService
-      .getFilteredBookmarks(inputValue)
-      .subscribe((response: Array<Bookmark>) => {
-        this.storeService.dispatchActionCoreSetFilteredBookmarksState(response);
+  ngOnInit(): void {
+    this.searchedValue.valueChanges
+      .pipe(debounceTime(500))
+      .subscribe((inputValue) => {
+        this.updateService.updateCurrentSearchWord(inputValue);
+        this.apiService
+          .getFilteredBookmarks(inputValue)
+          .subscribe((response: Array<Bookmark>) => {
+            this.storeService.dispatchActionCoreSetFilteredBookmarksState(
+              response
+            );
+          });
       });
   }
 

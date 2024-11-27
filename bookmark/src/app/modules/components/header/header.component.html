@@ -3,10 +3,9 @@
   <mat-form-field class="search-field">
     <input
       matInput
+      [formControl]="searchedValue"
       type="text"
-      [(ngModel)]="searchedValue"
       placeholder="Search for a bookmark..."
-      (input)="onChangeInput($event)"
     />
     <button matSuffix mat-icon-button aria-label="Search">
       <mat-icon fontSet="material-icons-outlined">search</mat-icon>

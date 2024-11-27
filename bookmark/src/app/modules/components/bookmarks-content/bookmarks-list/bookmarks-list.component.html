@@ -3,7 +3,9 @@
     <mat-icon class="bookmark-icon">bookmark</mat-icon>
     <div>
       <div class="bookmark-name">{{ bookmark.name }}</div>
-      <div class="bookmark-url">{{ bookmark.url }}</div>
+      <div class="bookmark-url" (click)="onOpenPage(bookmark.url)">
+        {{ bookmark.url }}
+      </div>
     </div>
   </div>
   <div>
