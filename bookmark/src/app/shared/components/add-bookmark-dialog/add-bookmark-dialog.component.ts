@@ -60,4 +60,8 @@ export class AddBookmarkDialogComponent implements OnInit {
       });
     }
   }
+
+  onCancelDialog() {
+    this.dialogRef.close();
+  }
 }

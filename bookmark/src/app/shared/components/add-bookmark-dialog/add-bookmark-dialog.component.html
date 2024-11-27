@@ -5,7 +5,7 @@
     <mat-icon>bookmark_outline</mat-icon>
   </div>
 
-  <form [formGroup]="bookmarkForm" (ngSubmit)="onSubmit()">
+  <form [formGroup]="bookmarkForm">
     <div class="form">
       <mat-form-field>
         <mat-label>Name</mat-label>
@@ -16,13 +16,16 @@
         <input matInput formControlName="url" />
       </mat-form-field>
     </div>
-    <button
-      mat-button
-      type="submit"
-      [disabled]="!bookmarkForm.valid"
-      class="btn-submit"
-    >
-      {{ data ? "Update Bookmark" : "Create Bookmark" }}
-    </button>
+    <div class="btn-container">
+      <button mat-button (click)="onCancelDialog()">Cancel</button>
+      <button
+        mat-button
+        [disabled]="!bookmarkForm.valid"
+        class="btn-submit"
+        (click)="onSubmit()"
+      >
+        {{ data ? "Update Bookmark" : "Create Bookmark" }}
+      </button>
+    </div>
   </form>
 </div>

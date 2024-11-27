@@ -33,14 +33,19 @@
         }
     }
 
-    .btn-submit {
-        background-color: #393E46;
-        color: #EEEEEE;
+    .btn-container {
         position: absolute;
         right: 20px;
 
-        &:disabled {
-            background-color: #888B90;
+        .btn-submit {
+            background-color: #393E46;
+            color: #EEEEEE;
+            margin-left: 15px;
+
+            &:disabled {
+                background-color: #888B90;
+            }
         }
     }
+
 }

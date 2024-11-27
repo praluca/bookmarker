@@ -18,7 +18,7 @@ export class DeleteBookmarkDialogComponent implements OnInit {
 
   ngOnInit(): void {}
 
-  onCancel() {
+  onCancelDialog() {
     this.dialogRef.close();
   }
 
