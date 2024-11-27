@@ -73,3 +73,9 @@ Open your browser on http://localhost:4200/
   I used NgRx to store bookamrks and filtered bookmarks in app state.
 
   ![App Screenshot](https://github.com/praluca/bookmarker/blob/main/pictures_of_app/ngrx_store.png)
+
+  ## Error Handling
+
+  I used an HTTPError interceptor that will catch all errors that come through endpoints
+
+  ![App Screenshot](https://github.com/praluca/bookmarker/blob/main/pictures_of_app/error_400.png)
