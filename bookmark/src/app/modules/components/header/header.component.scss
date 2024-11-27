@@ -1,6 +1,8 @@
+@import "colors";
+
 .header-content {
     height: 75px;
-    background-color: #222831;
+    background-color: $black;
     display: flex;
     align-items: center;
     padding: 0 20px;
@@ -9,7 +11,7 @@
     .app-title {
         font-weight: 700;
         font-size: 18px;
-        color: #EEEEEE;
+        color: $grey;
     }
 
     .search-field {
@@ -17,11 +19,11 @@
         margin-top: 15px;
 
         input {
-            color: #EEEEEE;
+            color: $grey;
         }
     }
 }
 
 mat-icon {
-    color: #EEEEEE !important;
+    color: $grey !important;
 }

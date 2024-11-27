@@ -1,9 +1,11 @@
+@import "colors";
+
 .bookmarks-list {
     display: flex;
     align-items: center;
     justify-content: space-between;
     margin: 10px 10px;
-    color: #222831;
+    color: $black;
     width: 550px;
     box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
     border-radius: 15px;
@@ -16,7 +18,7 @@
 
     .bookmark-icon {
         margin-right: 20px;
-        color: #393E46 !important;
+        color: $arsenic !important;
     }
 
     .bookmark-name {
@@ -31,12 +33,12 @@
         font-size: 14px;
         font-weight: 500;
         font-style: italic;
-        color: #00ADB5;
+        color: $teal;
         text-decoration: underline;
         cursor: pointer;
     }
 
     .edit-icon {
-        color: #393E46;
+        color: $arsenic;
     }
 }

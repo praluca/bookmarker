@@ -1,11 +1,13 @@
+@import "colors";
+
 .dialog-content {
-    color: #EEEEEE;
+    color: $grey;
 
     .header {
         padding: 20px;
         display: flex;
         justify-content: space-between;
-        background-color: #00ADB5;
+        background-color: $teal;
 
         .title {
             font-size: 18px;
@@ -20,7 +22,7 @@
     }
 
     .content {
-        color: #393E46;
+        color: $arsenic;
         padding: 25px;
         display: flex;
         flex-direction: column;
@@ -40,7 +42,7 @@
             .bookmark-name {
                 font-style: italic;
                 font-weight: 600;
-                color: #00ADB5;
+                color: $teal;
             }
         }
     }
@@ -52,8 +54,8 @@
         justify-content: space-between;
 
         .btn-delete {
-            background-color: #393E46;
-            color: #EEEEEE;
+            background-color: $arsenic;
+            color: $grey;
             cursor: pointer;
         }
     }

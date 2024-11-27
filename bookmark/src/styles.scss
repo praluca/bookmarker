@@ -1,10 +1,12 @@
+@import "colors";
+
 html,
 body {
     height: 100%;
 }
 
 body {
-    background-color: #EEEEEE;
+    background-color: $grey;
     margin: 0;
     font-family: Roboto, "Helvetica Neue", sans-serif;
 }
@@ -20,27 +22,27 @@ app-header {
 
     .mdc-text-field--filled:not(.mdc-text-field--disabled) .mdc-floating-label,
     .mdc-text-field--filled:not(.mdc-text-field--disabled) .mdc-floating-label--float-above {
-        color: #EEEEEE;
+        color: $grey;
     }
 
     .mdc-text-field--filled:not(.mdc-text-field--disabled) .mdc-line-ripple::before {
-        border-bottom-color: #EEEEEE;
+        border-bottom-color: $grey;
     }
 
     .mdc-text-field--filled:not(.mdc-text-field--disabled) .mdc-line-ripple::after {
-        border-bottom-color: #EEEEEE;
+        border-bottom-color: $grey;
     }
 
     .mdc-text-field--filled:not(.mdc-text-field--disabled):not(.mdc-text-field--focused):hover .mdc-line-ripple::before {
-        border-bottom-color: #EEEEEE;
+        border-bottom-color: $grey;
     }
 
     .mdc-text-field--filled:not(.mdc-text-field--disabled) .mdc-text-field__input {
-        caret-color: #EEEEEE;
+        caret-color: $grey;
     }
 
     input::placeholder {
-        color: #EEEEEE !important;
+        color: $grey !important;
         opacity: 0.5 !important;
     }
 
@@ -60,28 +62,28 @@ app-add-bookmark-dialog {
     }
 
     .mdc-text-field--filled:not(.mdc-text-field--disabled) .mdc-text-field__input {
-        caret-color: #393E46;
+        caret-color: $arsenic;
     }
 
     .mdc-text-field--filled:not(.mdc-text-field--disabled) .mdc-line-ripple::before {
-        border-bottom-color: #393E46;
+        border-bottom-color: $arsenic;
     }
 
     .mdc-text-field--filled:not(.mdc-text-field--disabled) .mdc-line-ripple::after {
-        border-bottom-color: #393E46;
+        border-bottom-color: $arsenic;
     }
 
     .mdc-text-field--filled:not(.mdc-text-field--disabled):not(.mdc-text-field--focused):hover .mdc-line-ripple::before {
-        border-bottom-color: #393E46;
+        border-bottom-color: $arsenic;
     }
 
     .mdc-text-field--filled:not(.mdc-text-field--disabled).mdc-text-field--focused .mdc-floating-label,
     .mdc-text-field--filled:not(.mdc-text-field--disabled).mdc-text-field--focused .mdc-floating-label--float-above {
-        color: #393E46;
+        color: $arsenic;
 
     }
 
     .mat-mdc-form-field-focus-overlay {
-        background-color: #EEEEEE;
+        background-color: $grey;
     }
 }
