@@ -1,7 +1,18 @@
-@mixin text($color, $font, $size, $style, $weight) {
-  color: $color;
-  font-style: $style;
-  font-family: $font;
-  font-weight: $weight;
+@mixin text($size, $style, $weight) {
   font-size: $size;
+  font-style: $style;
+  font-weight: $weight;
+
+}
+
+@mixin display_flex_row($display, $direction, $justify_content) {
+  display: $display;
+  flex-direction: $direction;
+  justify-content: $justify_content;
+}
+
+@mixin display_flex_column($display, $direction, $align_items) {
+  display: $display;
+  flex-direction: $direction;
+  align-items: $align_items;
 }

@@ -1,12 +1,12 @@
 @import "colors";
+@import "mixins";
 
 .dialog-content {
     color: $grey;
 
     .header {
         padding: 20px;
-        display: flex;
-        justify-content: space-between;
+        @include display_flex_row(flex, row, space-between);
         background-color: $teal;
 
         .title {
@@ -24,9 +24,7 @@
     .content {
         color: $arsenic;
         padding: 25px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+        @include display_flex_column(flex, column, center);
 
         .question {
             font-size: 18px;
@@ -40,18 +38,17 @@
             font-size: 14px;
 
             .bookmark-name {
-                font-style: italic;
-                font-weight: 600;
+                @include text(14px, italic, 600);
                 color: $teal;
             }
         }
     }
 
     .btn-container {
-        display: flex;
+        @include display_flex_row(flex, row, space-between);
         margin-top: 25px;
         width: 250px;
-        justify-content: space-between;
+
 
         .btn-delete {
             background-color: $arsenic;

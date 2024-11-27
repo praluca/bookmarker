@@ -1,9 +1,8 @@
 @import "colors";
+@import "mixins";
 
 .bookmarks-list {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    @include display_flex_row(flex, row, space-between);
     margin: 10px 10px;
     color: $black;
     width: 550px;
@@ -22,17 +21,14 @@
     }
 
     .bookmark-name {
-        font-weight: 600;
-        font-size: 18px;
+        @include text(18px, normal, 600);
         line-height: 35px;
     }
 
     .bookmark-url {
         word-wrap: break-word;
         max-width: 400px;
-        font-size: 14px;
-        font-weight: 500;
-        font-style: italic;
+        @include text(14px, italic, 500);
         color: $teal;
         text-decoration: underline;
         cursor: pointer;

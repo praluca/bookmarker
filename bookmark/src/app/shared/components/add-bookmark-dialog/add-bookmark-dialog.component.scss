@@ -1,12 +1,12 @@
 @import "colors";
+@import "mixins";
 
 .dialog-content {
     color: $grey;
 
     .header {
         padding: 20px;
-        display: flex;
-        justify-content: space-between;
+        @include display_flex_row(flex, row, space-between);
         background-color: $teal;
 
         .title {
